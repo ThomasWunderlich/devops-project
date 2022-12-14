@@ -29,6 +29,6 @@ jobs:
       - name: Build docker container
         uses: docker/build-push-action@v3
         with:
-          context: /python
+          context: python/
           push: false # Switch to true after setting up dockerhub and a login step
           tags: fib-app:latest
