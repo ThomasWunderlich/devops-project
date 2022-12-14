@@ -23,5 +23,6 @@ Unit tests and mypy are run automatically by github actions.
 - Set up a build system like Pants, and switch to creating pex binaries
 - Add more quality checks like black, flake8/ruff, bandit. The recommended way is to set up Pants and then just run pants lint, pants fmt, pants typecheck
 - Set up a real server like Gunicorn
+- Add k8s nice to haves like service mesh with observability, secrets management, cert management, etc
 
 
