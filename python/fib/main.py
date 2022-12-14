@@ -16,7 +16,7 @@ def fibonacci(n: int) -> List[int]:
     """Return the first `n` Fibonacci numbers."""
     if n < 0:
         raise Exception("This can only take positive integers")
-    fib_list = []
+    fib_list: List[int] = []
     for i in range(n):
         result = _get_fib_number(i, fib_list)
         fib_list.append(result)
