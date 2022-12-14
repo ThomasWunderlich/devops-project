@@ -15,6 +15,5 @@ class TestFibonacci(unittest.TestCase):
         self.assertEqual(fibonacci(29), fib_seq)
 
 
-
 if __name__ == '__main__':
     unittest.main()

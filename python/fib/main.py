@@ -1,11 +1,26 @@
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
+from typing import List
 
 
-def fibonacci(n: int):
+def _get_fib_number(n: int, sequence: List[int]) -> int:
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return sequence[n-1] + sequence[n-2]
+
+
+def fibonacci(n: int) -> List[int]:
     """Return the first `n` Fibonacci numbers."""
-    # TODO: Fill this function out
-    pass
+    if n < 0:
+        raise Exception("This can only take positive integers")
+    fib_list = []
+    for i in range(n):
+        result = _get_fib_number(i, fib_list)
+        fib_list.append(result)
+    return fib_list
 
 
 class GetFibs(BaseHTTPRequestHandler):
